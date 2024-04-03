@@ -24,7 +24,7 @@ public class Product {
     @Column(name = "unit_price")
     private BigDecimal unitPrice;
     @Column(name = "image_url")
-    private String imageURL;
+    private String imageUrl;
     @Column(name = "active")
     private boolean active;
     @Column(name = "units_in_stock")
@@ -38,5 +38,5 @@ public class Product {
 
     @ManyToOne
     @JoinColumn(name = "category_id")
-    ProductCategory productCategory;
+    ProductCategory category;
 }
