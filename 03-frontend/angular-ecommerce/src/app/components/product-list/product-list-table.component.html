@@ -1,0 +1,18 @@
+<div class="container">
+  <table class="table table-hover">
+    <thead class="table-dark">
+      <tr>
+        <td>name</td>
+        <td>description</td>
+        <td>unitPrice</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let tempProduct of products">
+        <td>{{ tempProduct.name }}</td>
+        <td>{{ tempProduct.description }}</td>
+        <td>{{ tempProduct.unitPrice }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
