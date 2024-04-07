@@ -23,14 +23,32 @@ export class CartService {
       alreadyExistInCart = existingCartItem != undefined;
     }
     if (alreadyExistInCart) {
-      console.log('in cartService, if(alreadyExist..), the true section ');
       existingCartItem!.quantity++;
     } else {
-      console.log('in cartService, if(alreadyExist..), the false section ');
       this.cartItems.push(theCartItem);
     }
 
     this.computeCartTotals();
+  }
+
+  decrementQuantity(theCartItem: CartItem) {
+    theCartItem.quantity--;
+
+    if (theCartItem.quantity == 0) {
+      this.remove(theCartItem);
+    } else {
+      this.computeCartTotals();
+    }
+  }
+
+  remove(theCartItem: CartItem) {
+    const itemIndex: number = this.cartItems.findIndex(
+      (tempCartItem) => tempCartItem.id == theCartItem.id
+    );
+    if (itemIndex > -1) {
+      this.cartItems.splice(itemIndex, 1);
+      this.computeCartTotals();
+    }
   }
 
   computeCartTotals() {
