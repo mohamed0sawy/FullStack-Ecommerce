@@ -132,18 +132,9 @@
             <div class="col-md-9">
               <div class="input-space">
                 <select formControlName="expirationMonth">
-                  <option>January</option>
-                  <option>February</option>
-                  <option>March</option>
-                  <option>April</option>
-                  <option>May</option>
-                  <option>June</option>
-                  <option>July</option>
-                  <option>August</option>
-                  <option>September</option>
-                  <option>October</option>
-                  <option>November</option>
-                  <option>December</option>
+                  <option *ngFor="let tempMonth of months">
+                    {{ tempMonth }}
+                  </option>
                 </select>
               </div>
             </div>
@@ -151,11 +142,7 @@
             <div class="col-md-9">
               <div class="input-space">
                 <select formControlName="expirationYear">
-                  <option>2025</option>
-                  <option>2026</option>
-                  <option>2027</option>
-                  <option>2028</option>
-                  <option>2029</option>
+                  <option *ngFor="let tempYear of years">{{ tempYear }}</option>
                 </select>
               </div>
             </div>
