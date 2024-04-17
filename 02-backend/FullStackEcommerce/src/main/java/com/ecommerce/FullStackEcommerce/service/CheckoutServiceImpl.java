@@ -34,7 +34,7 @@ public class CheckoutServiceImpl implements CheckoutService {
         Customer customer = purchase.getCustomer();
 
         order.setOrderTrackingNumber(orderTrackingNumber);
-        orderItems.forEach(order::add);
+        orderItems.forEach(item -> order.add(item));
         order.setShippingAddress(shippingAddress);
         order.setBillingAddress(billingAddress);
         customer.add(order);
