@@ -200,6 +200,10 @@ aside.menu-sidebar.d-none.d-lg-block.clr {
   align-items: center;
 }
 
+.header-item {
+  flex-grow: 1; /* Each item takes equal space */
+}
+
 .number {
   padding: 6px 0;
 }
@@ -224,7 +228,7 @@ section {
 }
 
 .au-input-xl {
-  min-width: 935px;
+  min-width: 535px;
 }
 
 input.au-input.au-input-xl {

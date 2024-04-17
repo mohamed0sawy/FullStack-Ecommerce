@@ -3,10 +3,10 @@
     Welcome back {{ userFullName }}
   </div>
 
-  <button *ngIf="!isAuthenticated" routerLink="/login" class="security-btn">
+  <button *ngIf="!isAuthenticated" routerLink="/login" class="au-btn-submit">
     Login
   </button>
-  <button *ngIf="isAuthenticated" (click)="logout()" class="security-btn">
+  <button *ngIf="isAuthenticated" (click)="logout()" class="au-btn-submit">
     Logout
   </button>
 </div>
