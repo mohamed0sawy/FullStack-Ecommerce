@@ -1,3 +1,7 @@
+![Language](https://img.shields.io/badge/language-Java%20-blue.svg)
+![Technologies](https://img.shields.io/badge/technologies-Spring_boot%20-green.svg)
+![Technologies](https://img.shields.io/badge/technologies-Angular%20-red.svg)
+
 # FullStack Ecommerce 🛒
 
 # Overview 
